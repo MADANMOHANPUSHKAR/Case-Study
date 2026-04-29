@@ -4,8 +4,8 @@
 
 See: .planning/PROJECT.md (updated 2026-04-29)
 
-**Core value:** Seamless, autonomous execution of development tasks driven by a PRD and progress log.
-**Current focus:** Initialization
+**Core value:** Secure, spoof-proof access and tracking for college facilities and events, driven by seamless facial recognition technology.
+**Current focus:** Initialization & Research Planning
 
 ---
-*Last updated: 2026-04-29 after initialization*
+*Last updated: 2026-04-29 after user pivot*

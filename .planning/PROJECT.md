@@ -1,12 +1,12 @@
-# Ralph Agent Integration
+# College Activity & Facility Portal
 
 ## What This Is
 
-A project to integrate the "Ralph" autonomous AI agent loop into the repository and develop a CLI/automation wrapper for it. It allows for automated processing of development tasks (user stories) from a PRD file using an iterative AI loop.
+A responsive web application (for mobile and laptop) that serves as a unified college portal. It uses AI/ML-based facial recognition to securely track user access and prevent spoofing (e.g., tracking for friends). The platform manages society events, online registrations for facilities like gyms and swimming pools, and signups for upcoming workshops.
 
 ## Core Value
 
-Seamless, autonomous execution of development tasks driven by a PRD and progress log.
+Secure, spoof-proof access and tracking for college facilities and events, driven by seamless facial recognition technology.
 
 ## Requirements
 
@@ -16,33 +16,34 @@ Seamless, autonomous execution of development tasks driven by a PRD and progress
 
 ### Active
 
-- [ ] Develop a CLI/automation wrapper for the Ralph script.
-- [ ] Integrate Ralph into the repository's development workflow.
-- [ ] Enable Ralph to process user stories from `prd.json`.
-- [ ] Ensure Ralph correctly updates `progress.txt` and `prd.json`.
+- [ ] Implement AI/ML facial recognition for secure user login and tracking.
+- [ ] Create a responsive web interface optimized for both mobile and laptop screens.
+- [ ] Build a module for Societies and Major Events (viewing and tracking past/current events).
+- [ ] Build a College Facilities module (end-to-end online registration and approval for Gym and Swimming).
+- [ ] Build an Upcoming Workshops/Events module (registration to attendance tracking).
+- [ ] Ensure the face scanner enforces strict 1-to-1 tracking to prevent proxy attendance.
 
 ### Out of Scope
 
-- **Building a new AI model**: We are using existing tools (amp/claude) via Ralph. — Focus is on automation and integration, not model development.
+- [Hardware integrations] — The face scanning will rely on the user's device camera (mobile/laptop) rather than dedicated physical campus hardware.
 
 ## Context
 
-- Ralph is a bash script (`ralph.sh`) that runs an AI agent loop.
-- It uses `prd.json` for requirements and `progress.txt` for memory/patterns.
-- it supports `amp` and `claude` as the underlying AI tool.
-- The user has already set up the initial scripts in `scripts/ralph/`.
+- The core differentiator is the biometric security (facial recognition) to prevent students from logging in or claiming attendance for their friends.
+- Needs to handle end-to-end workflows: Registration -> Approval -> Attendance.
+- Will likely need integration with a pre-trained ML model (e.g., face-api.js, AWS Rekognition, or similar) to handle the facial features natively in-browser or via a backend API.
 
 ## Constraints
 
-- **Tech Stack**: Bash for core loop, JS/TS for the wrapper, JSON for the PRD. — Driven by existing Ralph implementation.
-- **Dependencies**: Requires `amp` or `claude` CLI to be available in the environment. — Core dependency for Ralph.
+- **Security/Privacy**: Handling facial data requires strict privacy compliance and secure storage.
+- **Performance**: Facial recognition needs to be reasonably fast and work across various device cameras.
+- **Cross-Platform**: Must work reliably on both mobile browsers and desktop browsers.
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| CLI/Automation Wrapper | To provide a more robust interface for interacting with the Ralph loop. | — Pending |
-| Repository Integration | To allow Ralph to work directly on the codebase it resides in. | — Pending |
+| Device-based scanning | Using device webcams/mobile cameras keeps costs low and avoids custom hardware. | — Pending |
 
 ## Evolution
 
@@ -62,4 +63,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-04-29 after initialization*
+*Last updated: 2026-04-29 after user pivot*
